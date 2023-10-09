@@ -9,19 +9,19 @@ components:
   components:
   - type: Label
     properties: {role: body, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: PAGE VIEWS, font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'THIS WEEKS SALES ', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_2
     layout_properties: {grid_position: 'KHHYTD,VLBHJI'}
   - type: FlowPanel
-    properties: {}
+    properties: {align: center}
     name: flow_panel_1
     layout_properties: {grid_position: 'UKUHCZ,JZCHYN'}
     components:
     - type: Label
       properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '12930', font_size: null, font: '', spacing_above: small,
+        visible: true, text: '$32,930', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_5
@@ -40,19 +40,19 @@ components:
   components:
   - type: Label
     properties: {role: body, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: AVG TIME, font_size: null, font: '', spacing_above: small,
+      visible: true, text: THIS WEEKS PROFIT, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_4
     layout_properties: {grid_position: 'YTQXRZ,WVLWFF'}
   - type: FlowPanel
-    properties: {}
+    properties: {align: center}
     name: flow_panel_3
     layout_properties: {grid_position: 'LUUIKF,LIDJIO'}
     components:
     - type: Label
-      properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 42 mins., font_size: null, font: '', spacing_above: small,
+      properties: {role: headline, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: '$2,470', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_7
@@ -71,19 +71,19 @@ components:
   components:
   - type: Label
     properties: {role: body, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: BOUNCE RATE, font_size: null, font: '', spacing_above: small,
+      visible: true, text: THIS WEEKS CONTRACTS, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_3
     layout_properties: {grid_position: 'KDZSKT,QUJOLO'}
   - type: FlowPanel
-    properties: {}
+    properties: {align: center}
     name: flow_panel_2
     layout_properties: {grid_position: 'DEOGJL,CGNKMQ'}
     components:
     - type: Label
-      properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 34%, font_size: null, font: '', spacing_above: small,
+      properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '6', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_6
@@ -102,15 +102,15 @@ components:
   components:
   - type: Label
     properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Sign-ups, font_size: null, font: '', spacing_above: small,
+      visible: true, text: DEAL PIPELINE, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'TYZKNT,WZQHNH'}
-  - type: Plot
+  - name: flow_panel_4
     properties: {}
-    name: plot_1
-    layout_properties: {grid_position: 'LNSHOL,HLYVYY'}
+    type: FlowPanel
+    layout_properties: {grid_position: 'SJXKQP,SXHMLK'}
 - type: ColumnPanel
   properties: {role: card, col_widths: '{}'}
   name: card_5
@@ -118,7 +118,7 @@ components:
   components:
   - type: Label
     properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Results, font_size: null, font: '', spacing_above: small,
+      visible: true, text: IN-SERVICE, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_11
@@ -134,7 +134,7 @@ components:
   components:
   - type: Label
     properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Devices, font_size: null, font: '', spacing_above: small,
+      visible: true, text: PARTS, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_12

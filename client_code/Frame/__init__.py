@@ -15,13 +15,14 @@ class Frame(FrameTemplate):
     self.init_components(**properties)
     #Present users with a login form with just one line of code:
     #anvil.users.login_with_form()
-
+    users
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "rally"
     #When the app starts up, the Sales form will be added to the page
     self.content_panel.add_component(Sales())
     #Change the color of the sales_page_link to indicate that the Sales page has been selected
     self.sales_page_link.background = app.theme_colors['Primary Container']
+    user = anvil.users.login_with_form()
     
 
   def sales_page_link_click(self, **event_args):

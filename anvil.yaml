@@ -9,16 +9,16 @@ services:
     confirm_email: false, use_google: false}
   server_config: {user_table: users}
 startup: {type: form, module: Frame}
-package_name: RTO_DASHBOARD
+package_name: RTO_TODAY
 allow_embedding: false
-name: RTO DASHBOARD
+name: RTO TODAY
 runtime_options:
   version: 2
   client_version: '3'
   server_version: python3-sandbox
   server_spec: {base: python310-standard}
   preview_v3: true
-metadata: {title: RTO-DASHBOARDS, description: DASHBOARDS TO MANAGE  RENTING TRADING AND OWNING ASSETS,
+metadata: {title: RENT-TRADE-OWN-TODAY, description: DASHBOARDS TO MANAGE  RENTING TRADING AND OWNING ASSETS,
   logo_img: 'asset:rto (1).png'}
 startup_form: null
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap"
@@ -176,6 +176,37 @@ db_schema:
       admin_ui: {width: 200, order: 6}
       type: link_single
       target: inspections
+    - name: DATE ADDED
+      admin_ui: {width: 200, order: 7}
+      type: datetime
+    - name: MAKE MODEL
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: MILES
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: COLOR
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: SELLING PRICE
+      admin_ui: {width: 200, order: 11}
+      type: number
+    - name: RERERAL
+      admin_ui: {width: 200, order: 12}
+      type: link_single
+      target: referals
+    - name: KELLY BLUE BOOK
+      admin_ui: {width: 200, order: 13}
+      type: simpleObject
+    - name: AUCTION
+      admin_ui: {width: 200, order: 14}
+      type: simpleObject
+    - name: FAIR PURCHASE
+      admin_ui: {width: 200, order: 15}
+      type: number
+    - name: YEAR
+      admin_ui: {width: 200, order: 6.5}
+      type: number
     title: Inventory
   contracts:
     client: none

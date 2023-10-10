@@ -14,23 +14,24 @@ components:
     layout_properties: {grid_position: 'LLNAAG,BRSXTM'}
   - type: Button
     properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: ' Past', font_size: 18, font: '', spacing_above: small,
+      foreground: '', visible: true, text: ' TODAY', font_size: 18, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:bar-chart'}
+      underline: false, icon: 'fa:anchor'}
     name: sales_page_link
     layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
     event_bindings: {click: sales_page_link_click}
   - name: button_1
-    properties: {text: ' Present', bold: true, font_size: 18, icon: 'fa:anchor', align: left}
+    properties: {text: ' TOMMORROW', bold: true, font_size: 18, icon: 'fa:clock-o',
+      align: left}
     type: Button
     layout_properties: {grid_position: 'UPSXOV,XWOCSR'}
     data_bindings:
     - {property: font, code: 'self.item['''']', writeback: false}
   - type: Button
     properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: ' Future', font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:clock-o'}
+      foreground: '', visible: true, text: ' YESTERDAY', font_size: 18, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:recycle'}
     name: reports_page_link
     layout_properties: {grid_position: 'AODCYE,XQMJOX'}
     event_bindings: {click: reports_page_link_click}

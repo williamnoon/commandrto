@@ -68,3 +68,58 @@ db_schema:
       admin_ui: {order: 3, width: 200}
       type: datetime
     title: Files
+  leads:
+    client: none
+    server: full
+    columns:
+    - name: First Name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Last Name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Channel
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: contacted
+      admin_ui: {width: 200, order: 3}
+      type: bool
+    - name: Specialist
+      admin_ui: {width: 200, order: 4}
+      type: link_single
+      target: users
+    title: Leads
+  contacts:
+    client: none
+    server: full
+    columns:
+    - name: 'First Name '
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Middle Initial
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Last Name
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Phone
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: Address
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: Contracts
+      admin_ui: {width: 200, order: 5}
+      type: link_multiple
+      target: contracts
+    title: Contacts
+  contracts:
+    client: none
+    server: full
+    columns: []
+    title: Contracts
+  referals:
+    client: none
+    server: full
+    columns: []
+    title: Referals

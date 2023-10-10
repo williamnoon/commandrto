@@ -24,6 +24,101 @@ startup_form: null
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap"
     rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
 db_schema:
+  contacts:
+    client: none
+    server: full
+    columns:
+    - name: 'First Name '
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Middle Initial
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Last Name
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Phone
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: Address
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: Contracts
+      admin_ui: {width: 200, order: 5}
+      type: link_multiple
+      target: contracts
+    - name: Referals
+      admin_ui: {width: 200, order: 6}
+      type: link_multiple
+      target: referals
+    title: Contacts
+  inspections:
+    client: none
+    server: full
+    columns:
+    - name: Inspection Date
+      admin_ui: {width: 200, order: 1}
+      type: datetime
+    - name: Inspection Type
+      admin_ui: {width: 200, order: 2}
+      type: simpleObject
+    - name: Inspected Inventory
+      admin_ui: {width: 200, order: 3}
+      type: link_single
+      target: inventory
+    - name: Passed Items
+      admin_ui: {order: 4, width: 200}
+      type: simpleObject
+    - name: Failed Items
+      admin_ui: {width: 200, order: 5}
+      type: simpleObject
+    - name: Next Scheduled Inspection
+      admin_ui: {width: 200, order: 6}
+      type: datetime
+    - name: Inspection Item Notes
+      admin_ui: {order: 7, width: 200}
+      type: simpleObject
+    - name: Signers
+      admin_ui: {width: 200, order: 8}
+      type: link_multiple
+      target: signitures
+    - name: Status
+      admin_ui: {width: 200, order: 9}
+      type: simpleObject
+    - name: Pass Fail
+      admin_ui: {order: 10, width: 200}
+      type: bool
+    title: Inspections
+  owners:
+    client: none
+    server: full
+    columns: []
+    title: owners
+  referals:
+    client: none
+    server: full
+    columns: []
+    title: Referals
+  files:
+    client: none
+    server: full
+    columns:
+    - name: filename
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: author
+      admin_ui: {order: 2, width: 200}
+      type: link_single
+      target: users
+    - name: created
+      admin_ui: {order: 3, width: 200}
+      type: datetime
+    title: Files
+  table_10:
+    client: none
+    server: full
+    columns: []
+    title: Table 10
   users:
     client: none
     server: full
@@ -53,21 +148,75 @@ db_schema:
       admin_ui: {order: 7, width: 200}
       type: string
     title: Users
-  files:
+  inventory:
     client: none
     server: full
     columns:
-    - name: filename
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: author
-      admin_ui: {order: 2, width: 200}
+    - name: Status
+      admin_ui: {width: 200, order: 0}
+      type: simpleObject
+    - name: Id
+      admin_ui: {width: 200, order: 1}
+      type: simpleObject
+    - name: Contracts
+      admin_ui: {width: 200, order: 2}
+      type: link_multiple
+      target: contracts
+    - name: Owners
+      admin_ui: {width: 200, order: 3}
+      type: link_multiple
+      target: owners
+    - name: Acquisition Price
+      admin_ui: {width: 200, order: 4}
+      type: simpleObject
+    - name: Recon Cost
+      admin_ui: {width: 200, order: 5}
+      type: simpleObject
+    - name: Last Inspection
+      admin_ui: {width: 200, order: 6}
       type: link_single
-      target: users
-    - name: created
-      admin_ui: {order: 3, width: 200}
+      target: inspections
+    title: Inventory
+  contracts:
+    client: none
+    server: full
+    columns:
+    - name: Contract Type
+      admin_ui: {width: 200, order: 0}
+      type: simpleObject
+    - name: Contract Amount
+      admin_ui: {width: 200, order: 1}
+      type: simpleObject
+    - name: Contract Start
+      admin_ui: {width: 200, order: 2}
+      type: date
+    - name: Contract Status
+      admin_ui: {width: 200, order: 3}
+      type: simpleObject
+    - name: Contract Balance
+      admin_ui: {width: 200, order: 4}
+      type: simpleObject
+    - name: Contract Length
+      admin_ui: {width: 200, order: 5}
+      type: simpleObject
+    - name: Down Payment
+      admin_ui: {width: 200, order: 6}
+      type: simpleObject
+    - name: Payment Amount
+      admin_ui: {width: 200, order: 7}
+      type: simpleObject
+    - name: Last Payment
+      admin_ui: {width: 200, order: 8}
       type: datetime
-    title: Files
+    - name: Payment Schedule
+      admin_ui: {width: 200, order: 9}
+      type: simpleObject
+    title: Contracts
+  signitures:
+    client: none
+    server: full
+    columns: []
+    title: Signitures
   leads:
     client: none
     server: full
@@ -89,37 +238,3 @@ db_schema:
       type: link_single
       target: users
     title: Leads
-  contacts:
-    client: none
-    server: full
-    columns:
-    - name: 'First Name '
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: Middle Initial
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: Last Name
-      admin_ui: {width: 200, order: 2}
-      type: string
-    - name: Phone
-      admin_ui: {width: 200, order: 3}
-      type: number
-    - name: Address
-      admin_ui: {width: 200, order: 4}
-      type: string
-    - name: Contracts
-      admin_ui: {width: 200, order: 5}
-      type: link_multiple
-      target: contracts
-    title: Contacts
-  contracts:
-    client: none
-    server: full
-    columns: []
-    title: Contracts
-  referals:
-    client: none
-    server: full
-    columns: []
-    title: Referals

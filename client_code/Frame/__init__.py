@@ -44,10 +44,10 @@ class Frame(FrameTemplate):
     self.sales_page_link.background = "transparent"
 
   #If using the Users service, uncomment this code to log out the user:
-  # def signout_link_click(self, **event_args):
+  def signout_link_click(self, **event_args):
   #   """This method is called when the link is clicked"""
-  #   anvil.users.logout()
-  #   open_form('Logout')
+     anvil.users.logout()
+     open_form('Logout')
 
 
 

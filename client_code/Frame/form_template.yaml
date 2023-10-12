@@ -62,7 +62,8 @@ components:
   layout_properties: {slot: logo}
   components:
   - name: logo
-    properties: {visible: true}
+    properties: {visible: true, display_mode: fill_width, vertical_align: top, spacing_below: none,
+      spacing_above: none}
     type: Image
     layout_properties: {grid_position: 'LIDIFL,IUTEJB'}
     data_bindings: []

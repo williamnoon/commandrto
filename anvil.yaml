@@ -9,17 +9,17 @@ services:
     confirm_email: false, use_google: false}
   server_config: {user_table: users}
 startup: {type: form, module: Frame}
-package_name: RTO_TODAY
-allow_embedding: false
-name: RTO TODAY
+package_name: CommandRTO
+allow_embedding: true
+name: CommandRTO
 runtime_options:
   version: 2
   client_version: '3'
   server_version: python3-sandbox
   server_spec: {base: python310-standard}
   preview_v3: true
-metadata: {title: RENT-TRADE-OWN-TODAY, description: DASHBOARDS TO MANAGE  RENTING TRADING AND OWNING ASSETS,
-  logo_img: 'asset:rto (1).png'}
+metadata: {title: COMMAND RTO, description: DASHBOARDS TO MANAGE  RENTING TRADING AND OWNING OF ASSETS,
+  logo_img: 'asset:commandrto.png'}
 startup_form: null
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap"
     rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}

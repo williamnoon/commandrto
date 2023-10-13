@@ -1,3 +1,21 @@
-container: {type: ColumnPanel}
-components: []
+container:
+  type: ColumnPanel
+  properties: {role: headline, col_widths: '{"FUMNNX":60}'}
+components:
+- name: label_1
+  properties: {text: Contacts List}
+  type: Label
+  layout_properties: {grid_position: 'PUNWIU,FUMNNX'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Firstname, data_key: column_1}
+    - {id: VJQQOR, title: Middle Initial, data_key: column_2}
+    - {id: OJLQEN, title: LastName, data_key: column_3, width: 332, expand: false}
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: ContactsComponent.RowTemplate1}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'SVJZMR,HTCFUQ', full_width_row: false}
 is_package: true

@@ -1,6 +1,8 @@
 unique_ids:
   forms:
-    ContactsComponent: '1697165951736375665965759.99744'
+    ContactsComponent: '1697168281621712176975268.8478'
+    ContactsComponent.RowTemplate1: '1697168568882486392286015.8889'
+    ContactsComponent.RowTemplate2: '1697168914890506978831296.84906'
     Logout: '1685456931247635017053252.7155'
     MainForm: W4AJINNNK6GE56SS5BBPZFEUYSYVUQXM
   modules: {}

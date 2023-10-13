@@ -1,7 +1,7 @@
 
 from anvil import *
 
-from .ContactsComponent import ContactsComponent
+from ..ContactsComponent import ContactsComponent
 
 class MainForm(FormTemplate):
     def __init__(self, **properties):

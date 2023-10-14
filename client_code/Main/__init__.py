@@ -1,12 +1,11 @@
-
+from ._anvil_designer import MainTemplate
 from anvil import *
-
 from ..ContactsComponent import ContactsComponent
 
-class MainForm(FormTemplate):
+class Main(MainTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
-        users = anvil.users.login_with_form()
+        
 
         self.sidebar = ColumnPanel()
         self.add_component(self.sidebar)
@@ -17,6 +16,7 @@ class MainForm(FormTemplate):
         
         self.content_space = ColumnPanel()
         self.add_component(self.content_space)
+        users = anvil.users.login_with_form()
 
     def show_contacts(self, **event_args):
         self.content_space.clear()
@@ -29,6 +29,13 @@ class MainForm(FormTemplate):
   #   """This method is called when the link is clicked"""
      anvil.users.logout()
      open_form('Logout')
+
+    def show_inventory(self, **event_args):
+      """This method is called when the button is clicked"""
+      pass
+
+
+
 
 
 

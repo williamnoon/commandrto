@@ -1,5 +1,37 @@
 container:
   type: ColumnPanel
   properties: {role: headline, col_widths: '{}'}
-components: []
+components:
+- name: card_1
+  properties: {role: card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BPSIQL,VHSNVG'}
+  components:
+  - name: label_1
+    properties: {text: Leads}
+    type: Label
+    layout_properties: {grid_position: 'UQFREH,BZJESK'}
+  - name: refresh_button
+    properties: {text: Refresh, role: outlined, icon: 'fa:refresh'}
+    type: Button
+    layout_properties: {grid_position: 'UQFREH,ZZVKHM'}
+    event_bindings: {click: refresh_button_click}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'QRABAA,BGEJOW'}
+  - name: contacts_datagrid
+    properties:
+      columns:
+      - {id: JKSDUP, title: First Name, data_key: column_1}
+      - {id: VJQQOR, title: Middle Initial, data_key: column_2}
+      - {id: OJLQEN, title: Last Name, data_key: column_3}
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: ContactsComponent.RowTemplate3, background: 'theme:Background',
+        foreground: 'theme:Tertiary Container'}
+      type: RepeatingPanel
+      layout_properties: {}
+    layout_properties: {grid_position: 'OZWVQE,OKXILJ'}
 is_package: true

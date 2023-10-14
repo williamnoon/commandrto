@@ -1,0 +1,148 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'LLNAAG,BRSXTM'}
+  - type: Button
+    properties: {role: filled, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'yesterday      ', font_size: 18, font: '',
+      spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:retweet'}
+    name: show_contacts
+    layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
+    event_bindings: {click: show_contacts_click_click}
+  - name: button_1
+    properties: {text: 'today             ', bold: true, font_size: 18, icon: 'fa:anchor',
+      align: left, icon_align: right}
+    type: Button
+    layout_properties: {grid_position: 'UPSXOV,XWOCSR'}
+    data_bindings:
+    - {property: font, code: 'self.item['''']', writeback: false}
+    event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'Tommorrow   ', font_size: 18, font: '',
+      spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:flash'}
+    name: show_inventory
+    layout_properties: {grid_position: 'AODCYE,XQMJOX'}
+    event_bindings: {click: reports_page_link_click}
+    data_bindings:
+    - {property: font, code: 'self.item['''']', writeback: false}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '                                                                                 ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'KHSNGK,VNCASN'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:Primary', visible: true, text: Sign out, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:sign-out'}
+    name: signout_link
+    layout_properties: {grid_position: 'QDWBQK,DOAOHZ'}
+    event_bindings: {click: signout_link_click}
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_2
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DVHIUS,FOJHGL', full_width_row: true}
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'UMVLVH,LBKQBM', full_width_row: true}
+    components:
+    - name: label_2
+      properties: {text: Approvals, align: center, background: '', role: title, icon: 'fa:check-square-o'}
+      type: Label
+      layout_properties: {row: FFIHZN, width_xs: 4, col_xs: 0}
+    - name: label_3
+      properties: {text: ' Assets', role: title, icon: 'fa:car', align: center}
+      type: Label
+      layout_properties: {row: FFIHZN, width_xs: 3, col_xs: 8}
+    - name: card_5
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: ELZNEQ, width_xs: 12, col_xs: 0}
+    - name: card_8
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: EJJVKU, width_xs: 4, col_xs: 0}
+    - name: label_4
+      properties: {}
+      type: Label
+      layout_properties: {row: EJJVKU, width_xs: 3, col_xs: 4}
+    - name: card_3
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: EJJVKU, width_xs: 5, col_xs: 7}
+    - name: card_9
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: KSYBOH, width_xs: 4, col_xs: 0}
+    - name: label_8
+      properties: {}
+      type: Label
+      layout_properties: {row: KSYBOH, width_xs: 3, col_xs: 4}
+    - name: card_6
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: KSYBOH, width_xs: 5, col_xs: 7}
+    - name: card_11
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: ZOUVMQ, width_xs: 4, col_xs: 0}
+    - name: label_5
+      properties: {}
+      type: Label
+      layout_properties: {row: ZOUVMQ, width_xs: 3, col_xs: 4}
+    - name: card_14
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: ZOUVMQ, width_xs: 5, col_xs: 7}
+    - name: card_10
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: NWPIMP, width_xs: 4, col_xs: 0}
+    - name: label_6
+      properties: {}
+      type: Label
+      layout_properties: {row: NWPIMP, width_xs: 1, col_xs: 4}
+    - name: card_13
+      properties: {role: card}
+      type: ColumnPanel
+      layout_properties: {row: NWPIMP, width_xs: 5, col_xs: 7}
+  - name: card_7
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PPZWSG,GIVBMA'}
+  - name: spacer_2
+    properties: {height: 32, spacing_above: medium, spacing_below: medium}
+    type: Spacer
+    layout_properties: {grid_position: 'CLTAQV,NVSJEG'}
+- name: card_1
+  properties: {role: card}
+  type: ColumnPanel
+  layout_properties: {slot: logo}
+  components:
+  - name: logo
+    properties: {visible: true, display_mode: fill_width, vertical_align: top, spacing_below: none,
+      spacing_above: none}
+    type: Image
+    layout_properties: {grid_position: 'LIDIFL,IUTEJB'}
+    data_bindings: []
